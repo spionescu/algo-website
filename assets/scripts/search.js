@@ -114,11 +114,9 @@ function initLunrMain() {
       // declare fields
       lunrIndexMain = lunr(function () {
         this.ref("url");
-        this.field("title", {
-          boost: 10
-        });
-        this.field("content");
-        this.metadataWhitelist = ['position'];
+        this.field("title");
+        // this.field("content");
+        // this.metadataWhitelist = ['position'];
 
         for (var i = 0; i < indexMain.length; ++i) {
           this.add(indexMain[i]);
@@ -217,15 +215,15 @@ function renderResultsHeader(resultsHeader) {
     var heading = document.createElement('h5');
       heading.classList.add('result-title');
       heading.innerText = result.title;
-    var description = document.createElement('div');
-      description.classList.add('result-text');
-      description.innerText = "... " + result.content.substring(0, 50) + "...";
+    // var description = document.createElement('div');
+    //   description.classList.add('result-text');
+    //   description.innerText = "... " + result.content.substring(0, 50) + "...";
     var divider = document.createElement('div');
     divider.classList.add('dropdown-divider');
 
     ahref.href = result.url;
     ahref.appendChild(heading);
-    ahref.appendChild(description);
+    // ahref.appendChild(description);
 
     $resultsHeader.appendChild(ahref).insertAdjacentElement('afterend', divider);
     $('#search-results-header').css('display', 'block');
@@ -249,15 +247,15 @@ function renderResultsNav(resultsNav) {
       var heading = document.createElement('h5');
       heading.classList.add('result-title');
       heading.innerText = result.title;
-    var description = document.createElement('div');
-      description.classList.add('result-text');
-      description.innerText = "... " + result.content.substring(0, 50) + "...";
+    // var description = document.createElement('div');
+    //   description.classList.add('result-text');
+    //   description.innerText = "... " + result.content.substring(0, 50) + "...";
     var divider = document.createElement('div');
     divider.classList.add('dropdown-divider');
 
     ahref.href = result.url;
     ahref.appendChild(heading);
-    ahref.appendChild(description);
+    // ahref.appendChild(description);
 
     $resultsNav.appendChild(ahref).insertAdjacentElement('afterend', divider);
     $('#search-results-nav').css('display', 'block');
