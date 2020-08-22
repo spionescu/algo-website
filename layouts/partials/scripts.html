@@ -5,11 +5,14 @@
   var analyticsID = {{ .Site.Params.analytics }};
 </script>
 
+<script src="//cdn.jsdelivr.net/gh/fauna/faunadb-js-release@latest/faunadb-min.js"></script>
+
 {{ $jquery := resources.Get "scripts/jquery.js" }}
 {{ $popper := resources.Get "scripts/popper.js" }}
 {{ $bootstrap := resources.Get "scripts/bootstrap.js" }}
+{{ $fauna := resources.Get "scripts/fauna.js" | js.Build }}
 {{ $misc := resources.Get "scripts/misc.js" }}
-{{ $mainJS := slice $jquery $popper $bootstrap $misc | resources.Concat "main.js" }}
+{{ $mainJS := slice $jquery $popper $bootstrap $fauna $misc | resources.Concat "main.js" }}
 {{ with or (getenv "PRODUCTION") (getenv "PREVIEW") }}
   {{ $mainJS = $mainJS | minify | fingerprint }}
 {{ end }}

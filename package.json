@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/algosphere/algo-website",
   "devDependencies": {
+    "esbuild": "^0.6.27",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^6.1.0",
     "gulp-pretty-html": "^2.0.10",
