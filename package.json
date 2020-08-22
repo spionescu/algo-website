@@ -6,6 +6,7 @@
   "scripts": {
     "start": "hugo server -DEF --i18n-warnings",
     "build-dev": "hugo --buildDrafts --buildExpired --buildFuture --environment preview --i18n-warnings && gulp",
+    "build-fauna": "hugo --buildDrafts --buildExpired --buildFuture --environment fauna --i18n-warnings && gulp",
     "build": "hugo --i18n-warnings && gulp",
     "deploy": "netlify deploy --prod --dir public"
   },
