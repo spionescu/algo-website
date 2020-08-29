@@ -4,7 +4,7 @@
 // q = query
 // fauna = faunadb
 
-import faunadb, { query as q } from "faunadb"
+// import faunadb, { query as q } from "faunadb"
 
-console.log(faunadb)
-console.log(q)
+// console.log(faunadb)
+// console.log(q)

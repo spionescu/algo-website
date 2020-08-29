@@ -8,7 +8,7 @@
     "build-dev": "hugo --buildDrafts --buildExpired --buildFuture --environment preview --i18n-warnings && gulp",
     "build-fauna": "hugo --buildDrafts --buildExpired --buildFuture --environment fauna --i18n-warnings && gulp",
     "build": "hugo --i18n-warnings && gulp",
-    "deploy": "netlify deploy --prod --dir public"
+    "deploy": "netlify deploy --prod --dir public --functions=assets/scripts/functions"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "imagemin-svgo": "^7.1.0"
   },
   "dependencies": {
-    "faunadb": "^3.0.1"
+    "faunadb": "^3.0.1",
+    "netlify-cli": "^2.59.1"
   }
 }
