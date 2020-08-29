@@ -2,7 +2,7 @@
   "name": "algosphere.org",
   "version": "1.0.0",
   "description": "Algosphere website",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "scripts": {
     "start": "hugo server -DEF --i18n-warnings",
     "build-dev": "hugo --buildDrafts --buildExpired --buildFuture --environment preview --i18n-warnings && gulp",
