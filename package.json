@@ -8,9 +8,6 @@
     "build-dev": "hugo --buildDrafts --buildExpired --buildFuture --environment preview --i18n-warnings && gulp",
     "build-fauna": "hugo --buildDrafts --buildExpired --buildFuture --environment fauna --i18n-warnings && gulp",
     "build": "hugo --i18n-warnings && gulp",
-    "link": "netlify link --id b44a9bd9-b9f6-423c-87e5-0e68297e4304",
-    "link-dev": "netlify link --id c97298da-938f-4084-9307-c7135a92f98a",
-    "link-fauna": "netlify link --id 6cd6f28a-2d4d-4f85-97f7-5e2bc4e076ed",
     "deploy": "netlify deploy --prod --dir public --functions=functions"
   },
   "repository": {
