@@ -11,7 +11,7 @@
 {{ $misc := resources.Get "scripts/misc.js" }}
 {{ $mainJS := slice $jquery $popper $bootstrap $misc | resources.Concat "main.js" }}
 {{ with or (getenv "PRODUCTION") (getenv "PREVIEW") }}
-{{ $mainJS = $mainJS | minify | fingerprint }}
+  {{ $mainJS = $mainJS | minify | fingerprint }}
 {{ end }}
 <script src="{{ $mainJS.RelPermalink }}" integrity="{{ $mainJS.Data.Integrity }}" defer></script>
 
