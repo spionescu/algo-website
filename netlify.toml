@@ -1,2 +1,2 @@
 [build]
-  functions = "assets/scripts/functions/"
+  functions = "functions/"
