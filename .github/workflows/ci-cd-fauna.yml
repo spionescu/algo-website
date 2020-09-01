@@ -42,8 +42,3 @@ jobs:
     - name: Deploy site
       run: npm run deploy
       if: success()
-    - name: Upload functions folder
-      uses: actions/upload-artifact@v2
-      with:
-        name: functions folder
-        path: functions/
