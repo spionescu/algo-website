@@ -1,9 +1,9 @@
-name: ci-cd-develop
+name: ci-cd-dev
 
 on:
   push:
     branches:
-      - develop
+      - dev
 
 env:
   PREVIEW: true
