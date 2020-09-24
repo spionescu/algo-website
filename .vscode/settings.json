@@ -1,7 +1,7 @@
 {
   "github-actions.workflows.pinned.workflows": [
-    ".github/workflows/ci-cd-main.yml",
-    ".github/workflows/ci-cd-develop.yml",
+    ".github/workflows/deploy-main.yml",
+    ".github/workflows/deploy-dev.yml",
     ".github/workflows/deploy-fauna.yml"
   ],
 }
